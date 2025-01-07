@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/auth/login_or_register.dart';
 import 'package:food_delivery/components/my_drawer_title.dart';
 import 'package:food_delivery/pages/setting_page.dart';
 
@@ -54,7 +55,15 @@ class MyDrawer extends StatelessWidget {
           MyDrawerTitle(
             text: "L O G O U T",
             icon: Icons.logout,
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginOrRegister(),
+                ),
+              );
+            },
           ),
 
           //settings list title
